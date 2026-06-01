@@ -5,17 +5,21 @@
  */
 
 import { createApp } from '@cyanheads/mcp-ts-core';
-import { echoPrompt } from './mcp-server/prompts/definitions/echo.prompt.js';
-import { echoResource } from './mcp-server/resources/definitions/echo.resource.js';
-import { echoAppUiResource } from './mcp-server/resources/definitions/echo-app-ui.app-resource.js';
-import { echoTool } from './mcp-server/tools/definitions/echo.tool.js';
-import { echoAppTool } from './mcp-server/tools/definitions/echo-app.app-tool.js';
+import { metGetObject } from './mcp-server/tools/definitions/met-get-object.tool.js';
+import { metListDepartments } from './mcp-server/tools/definitions/met-list-departments.tool.js';
+import { metSearch } from './mcp-server/tools/definitions/met-search.tool.js';
+import { initMetService } from './services/met/met-service.js';
 
 await createApp({
-  tools: [echoTool, echoAppTool],
-  resources: [echoResource, echoAppUiResource],
-  prompts: [echoPrompt],
-  // instructions: 'Server-level orientation forwarded to the model on every initialize.\n' +
-  //   '- Use shortcut `X` for the most common case\n' +
-  //   '- Tools require auth via the `inventory:read` scope',
+  tools: [metListDepartments, metSearch, metGetObject],
+  resources: [],
+  prompts: [],
+  instructions:
+    'The Metropolitan Museum of Art Collection API — 501,731 artworks spanning 5,000 years.\n' +
+    'Typical workflow: met_list_departments → met_search (returns IDs) → met_get_object (full records, up to 20 per call).\n' +
+    'isPublicDomain=true guarantees CC0 open-access images; hasImages=true includes copyrighted works without usable image URLs.\n' +
+    'The medium filter maps to classification categories ("Paintings", "Sculptures") — not material descriptions.',
+  setup(core) {
+    initMetService(core.config, core.storage);
+  },
 });
