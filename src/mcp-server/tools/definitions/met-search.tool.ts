@@ -175,14 +175,14 @@ export const metSearch = tool('met_search', {
       {
         q: input.q,
         limit: input.limit,
-        hasImages: input.hasImages ?? undefined,
-        isPublicDomain: input.isPublicDomain ?? undefined,
-        isHighlight: input.isHighlight ?? undefined,
-        medium: input.medium ?? undefined,
-        departmentId: input.departmentId ?? undefined,
-        geoLocation: input.geoLocation ?? undefined,
-        dateBegin: input.dateBegin ?? undefined,
-        dateEnd: input.dateEnd ?? undefined,
+        hasImages: input.hasImages,
+        isPublicDomain: input.isPublicDomain,
+        isHighlight: input.isHighlight,
+        medium: input.medium,
+        departmentId: input.departmentId,
+        geoLocation: input.geoLocation,
+        dateBegin: input.dateBegin,
+        dateEnd: input.dateEnd,
       },
       ctx,
     );
@@ -191,7 +191,7 @@ export const metSearch = tool('met_search', {
       throw ctx.fail(
         'no_results',
         `No objects matched the query "${input.q}" with the specified filters.`,
-        { ...ctx.recoveryFor('no_results') },
+        ctx.recoveryFor('no_results'),
       );
     }
 

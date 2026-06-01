@@ -42,7 +42,6 @@ export interface RawObjectRecord {
   isHighlight: boolean;
   isPublicDomain: boolean;
   isTimelineWork: boolean;
-  isTimelineWork_duplicate?: boolean;
   linkResource: string;
   locale: string;
   locus: string;

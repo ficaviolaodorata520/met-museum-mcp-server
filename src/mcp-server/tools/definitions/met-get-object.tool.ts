@@ -241,9 +241,11 @@ export const metGetObject = tool('met_get_object', {
       .map((r) => ({ objectID: r.objectID, error: r.error }));
 
     if (objects.length === 0) {
-      throw ctx.fail('all_failed', `All ${input.objectIDs.length} object fetches failed.`, {
-        ...ctx.recoveryFor('all_failed'),
-      });
+      throw ctx.fail(
+        'all_failed',
+        `All ${input.objectIDs.length} object fetches failed.`,
+        ctx.recoveryFor('all_failed'),
+      );
     }
 
     ctx.log.info('Met batch complete', { succeeded: objects.length, failed: failed.length });
