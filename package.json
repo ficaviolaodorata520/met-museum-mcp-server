@@ -1,8 +1,8 @@
 {
   "name": "@cyanheads/met-museum-mcp-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "mcpName": "io.github.cyanheads/met-museum-mcp-server",
-  "description": "MCP server for The Metropolitan Museum of Art collection — 470K+ artworks with metadata, provenance, and open-access high-res images.",
+  "description": "MCP server for The Metropolitan Museum of Art collection — 500K+ artworks with metadata, provenance, and open-access high-res images.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
