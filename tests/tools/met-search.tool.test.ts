@@ -72,6 +72,29 @@ describe('metSearch', () => {
     });
   });
 
+  it('passes geoLocation array to service (AND-combined by API)', async () => {
+    mockSearch.mockResolvedValue({
+      total: 12,
+      objectIDs: [1, 2, 3],
+      returned: 3,
+      truncated: false,
+    });
+
+    const ctx = createMockContext();
+    const input = metSearch.input.parse({
+      q: 'painting',
+      geoLocation: ['France', 'Spain'],
+      limit: 5,
+    });
+    // Multiple geoLocation values are AND-combined by the Met API (not OR) — passing two narrows results
+    const result = await metSearch.handler(input, ctx);
+    expect(mockSearch).toHaveBeenCalledWith(
+      expect.objectContaining({ geoLocation: ['France', 'Spain'] }),
+      ctx,
+    );
+    expect(result.total).toBe(12);
+  });
+
   it('format renders total and object IDs', () => {
     const blocks = metSearch.format!({
       total: 500,

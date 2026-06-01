@@ -71,8 +71,8 @@ export const metSearch = tool('met_search', {
       )
       .optional()
       .describe(
-        'Filter by geographic origin. Multiple values are OR-combined: ["France", "Italy"] returns objects from either country. ' +
-          'Matches the geographyType/country/region fields on the object. ' +
+        'Filter by geographic origin. Each value is matched broadly against geography fields and artist nationality. ' +
+          'Multiple values are AND-combined — ["France", "Egypt"] returns objects associated with both, not either; use a single value for broader results. ' +
           'Works best with the Egyptian Art, Greek and Roman Art, and similar departments that have well-populated geography fields.',
       ),
     dateBegin: z

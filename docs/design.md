@@ -102,7 +102,7 @@ z.object({
     .describe('Restrict results to one curatorial department. Use met_list_departments to get valid IDs (1–21, not all integers are valid). Can be combined with other filters; combining with isPublicDomain works but returns far fewer results than expected — use isPublicDomain alone when CC0 coverage is the goal.'),
 
   geoLocation: z.array(z.string()).optional()
-    .describe('Filter by geographic origin. Each element is a country, region, or city (e.g., ["France"], ["Egypt", "Sudan"]). Multiple values are OR-combined: ["France", "Italy"] returns objects from either country. Matches the geographyType/country/region fields on the object. Works best with the Egyptian Art, Greek and Roman Art, and similar departments that have well-populated geography fields.'),
+    .describe('Filter by geographic origin. Each element is a country, region, or city (e.g., ["France"], ["Egypt", "Sudan"]). Multiple values are AND-combined — ["France", "Egypt"] returns only objects associated with both; use a single value for broader results. Matches geography fields and artist nationality broadly. Works best with the Egyptian Art, Greek and Roman Art, and similar departments that have well-populated geography fields.'),
 
   dateBegin: z.number().int().optional()
     .describe('Earliest object date (year, inclusive). Negative integers for BCE (e.g., -500 for 500 BCE). Requires dateEnd.'),
@@ -157,7 +157,7 @@ errors: [
 - `title` filter is documented but returns 0 results in live testing for all tested queries — excluded until confirmed functional.
 - `medium` parameter maps to the `classification` field, not the materials/medium text field. Pass classification names ("Paintings", "Drawings", "Prints", "Ceramics", "Sculpture", "Photographs", "Textiles"). Passing material descriptions like "Oil on canvas" returns 0.
 - `isPublicDomain + departmentId` can be combined but returns far fewer results than either filter alone — search index only covers a subset of public-domain objects per department.
-- `geoLocation` multiple values require repeated query params in the HTTP request (`geoLocation=France&geoLocation=Italy`). The tool schema uses `z.array(z.string())` — the service layer serializes each array element as a separate query param.
+- `geoLocation` multiple values require repeated query params in the HTTP request (`geoLocation=France&geoLocation=Italy`). The tool schema uses `z.array(z.string())` — the service layer serializes each array element as a separate query param. Live testing (2026-06-01) confirmed multiple values are AND-combined (intersection), not OR (union) — `["France", "Italy"]` returns fewer results than `["France"]` alone. The filter also matches artist nationality, not just `country`/`region`/`geographyType` fields.
 - Search relevance is basic keyword match — not semantic. Long queries do not improve results; shorter terms and filters do.
 
 ---
@@ -438,6 +438,8 @@ The API provides flat `artistDisplayName`, `artistDisplayBio`, `artistNationalit
 ## Known Limitations
 
 - **Search relevance is basic keyword matching** — not semantic or ranked by quality. Very common terms return thousands of matches, most of which are peripheral. `departmentId` and `geoLocation` filters are more effective than longer keyword strings.
+- **`geoLocation` multiple values are AND-combined, not OR** — `["France", "Italy"]` returns objects associated with both, not either. Use a single value for broader filtering; AND behavior means adding more values narrows results. The filter matches artist nationality and other text fields, not just the object's geography fields.
+
 - **`artistOrCulture` and `title` filters are non-functional** (live API defects; see Decisions Log). `medium` works but maps to `classification`, not material descriptions.
 - **`isPublicDomain + departmentId` severely restricts results** — the combination works but returns far fewer results than either filter alone due to partial search-index coverage. Use `isPublicDomain` alone and filter by department on the returned object records (see Decisions Log).
 - **Non-public-domain objects have no image URLs** — the Met restricts images for works still under copyright. `primaryImage` and `primaryImageSmall` are empty strings; agents cannot display images for these works.
